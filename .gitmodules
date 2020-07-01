@@ -1,0 +1,3 @@
+[submodule "external-initiator"]
+	path = external-initiator
+	url = https://github.com/Conflux-Network-Global/external-initiator
