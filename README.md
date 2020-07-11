@@ -36,3 +36,4 @@ Resource Links
 
 Notes
 - send ETH to node address
+- CL node only sends 32 bytes of data in a ethtx transaction

@@ -1,0 +1,31 @@
+{
+	"initiators": [
+		{
+			"type": "ethlog",
+			"params": {
+				"address": "0x1927dc35fe8a554c9fffc1748328a06935b7f065"
+			}
+		}
+	],
+	"tasks": [
+		{
+			"type": "copy",
+			"confirmations": null,
+			"params": {
+				"copyPath": [
+					"data"
+				]
+			}
+		},
+		{
+			"type": "ethtx",
+			"confirmations": null,
+			"params": {
+				"address": "0x1927dc35fE8A554C9fFfC1748328A06935B7f065",
+				"functionSelector": "0x4a01a822"
+			}
+		}
+	],
+	"startAt": null,
+	"endAt": null
+}
