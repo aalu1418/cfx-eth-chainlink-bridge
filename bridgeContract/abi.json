@@ -1,0 +1,38 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_address",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "functionSignature",
+				"type": "string"
+			},
+			{
+				"internalType": "bytes32",
+				"name": "_data",
+				"type": "bytes32"
+			}
+		],
+		"name": "newTx",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "bytes",
+				"name": "data",
+				"type": "bytes"
+			}
+		],
+		"name": "Tx",
+		"type": "event"
+	}
+]
