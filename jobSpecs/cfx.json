@@ -1,0 +1,15 @@
+{
+  "initiators": [
+    {
+      "type": "external",
+      "params": {
+        "name": "cfx",
+        "body": {
+          "endpoint": "cfx-testnet",
+          "addresses": ["0x85e4e7341abbe1bb6c860399bc4c503058e13346"]
+        }
+      }
+    }
+  ],
+  "tasks": [{ "type": "noop" }]
+}

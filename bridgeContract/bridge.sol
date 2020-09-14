@@ -11,4 +11,4 @@ contract Bridge {
 }
 
 //Ropsten deployment: 0x57F5dede4116DFd861f4736039bB914e84ac9651
-//Conflux testnet deployment: 
+//Conflux testnet deployment: 0x85e4e7341abbe1bb6c860399bc4c503058e13346

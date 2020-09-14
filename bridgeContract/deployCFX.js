@@ -3,24 +3,19 @@
 const { Conflux, util } = require('js-conflux-sdk');
 require("dotenv").config();
 
-const PRIVATE_KEY = process.env.PRIVATE_KEY;
+const PRIVATE_KEY = process.env.CFX_PRIVATE_KEY;
 
 async function main() {
   // const defaultGasPrice = util.unit("GDrip", "Drip")(10)
 
   const cfx = new Conflux({
     url: 'http://testnet-jsonrpc.conflux-chain.org:12537',
-    defaultGasPrice: 100,
-    defaultGas: 1000000,
     logger: console,
   });
 
-  console.log(cfx.defaultGasPrice); // 100
-  console.log(cfx.defaultGas); // 1000000
-
   // ================================ Account =================================
   const account = cfx.Account({privateKey: PRIVATE_KEY}); // create account instance
-  console.log(account.address); // 0x1bd9e9be525ab967e633bcdaeac8bd5723ed4d6b
+  console.log(account.address);
 
   // ================================ Contract ================================
   // create contract instance
@@ -30,19 +25,14 @@ async function main() {
     // address is empty and wait for deploy
   });
 
-  // estimate deploy contract gas use
-  const estimate = await contract.constructor().estimateGasAndCollateral();
-  console.log(JSON.stringify(estimate)); // {"gasUsed":"175050","storageCollateralized":"64"}
-
   //get next nonce
   const nextNonce = await cfx.getNextNonce(account.address)
   console.log(Number(nextNonce));
 
-  // // deploy the contract, and get `contractCreated`
-  // const receipt = await contract.constructor()
-  //   .sendTransaction({ from: account})
-  //   .confirmed();
-  // console.log(receipt);
+  // deploy the contract, and get `contractCreated`
+  const deployTransaction = contract.constructor();
+  const receipt = await account.sendTransaction(deployTransaction).executed();
+  console.log(receipt);
 
 }
 

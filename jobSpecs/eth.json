@@ -1,0 +1,11 @@
+{
+  "initiators": [
+    {
+      "type": "ethlog",
+      "params":{
+        "address": "0x57F5dede4116DFd861f4736039bB914e84ac9651"
+      }
+    }
+  ],
+  "tasks": [{ "type": "noop" }]
+}
