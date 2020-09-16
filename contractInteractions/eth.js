@@ -13,11 +13,13 @@ const main = async () => {
     wallet
   );
 
-  await contract.newTx(
+  const tx = await contract.newTx(
     "0x57F5dede4116DFd861f4736039bB914e84ac9651",
     "0x12341234",
     "0x0000000000000000000000000000000000000000000000000000000000000000"
   );
+
+  console.log(tx);
 };
 
 main().catch((error) => console.log(error));

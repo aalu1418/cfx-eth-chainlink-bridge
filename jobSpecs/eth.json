@@ -7,5 +7,5 @@
       }
     }
   ],
-  "tasks": [{ "type": "noop" }]
+  "tasks": [{ "type": "cfxTx" }]
 }
