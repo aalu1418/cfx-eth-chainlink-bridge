@@ -1,14 +1,16 @@
 pragma solidity ^0.6.0;
 
 contract Bridge {
-    event Tx(bytes data);
+    event Tx(address, bytes4, bytes);
 
-    function newTx(address _address, string calldata functionSignature, bytes32 _data) external {
+    constructor() public {}
+
+    function newTx(address _address, string calldata functionSignature, bytes calldata _data) external {
         bytes memory _functionSignature = bytes(functionSignature);
         bytes4 _functionId = bytes4(keccak256(_functionSignature));
-        emit Tx(abi.encode(_address, _functionId, _data));
+        emit Tx(_address, _functionId, _data);
     }
 }
 
-//Ropsten deployment: 0x57F5dede4116DFd861f4736039bB914e84ac9651
-//Conflux testnet deployment: 0x85e4e7341abbe1bb6c860399bc4c503058e13346
+//Ropsten deployment: 0x0dbda5f4ff57110b2b510c651ba773f61af9f837
+//Conflux testnet deployment: 0x8c48bb7e715df67aa04fbbc15aaf92077fecd12d

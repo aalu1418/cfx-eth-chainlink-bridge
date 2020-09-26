@@ -6,7 +6,7 @@
         "name": "cfx",
         "body": {
           "endpoint": "cfx-testnet",
-          "addresses": ["0x85e4e7341abbe1bb6c860399bc4c503058e13346"]
+          "addresses": ["0x8c48bb7e715df67aa04fbbc15aaf92077fecd12d"]
         }
       }
     }

@@ -21,14 +21,14 @@ async function main() {
   // create contract instance
   const contract = cfx.Contract({
     abi: require("../bridgeContract/abi.json"), //can be copied from remix
-    address: "0x85e4e7341abbe1bb6c860399bc4c503058e13346",
+    address: "0x8c48bb7e715df67aa04fbbc15aaf92077fecd12d",
   });
 
   // deploy the contract, and get `contractCreated`
   const tx = contract.newTx(
     "0x57F5dede4116DFd861f4736039bB914e84ac9651",
-    "0x12341234",
-    "00000000000000000000000000000000"
+    "test(bytes32)",
+    Buffer.from("test")
   );
   const receipt = await account.sendTransaction(tx).executed();
   console.log(receipt);

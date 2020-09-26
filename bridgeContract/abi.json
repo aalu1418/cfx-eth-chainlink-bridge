@@ -9,8 +9,20 @@
 		"inputs": [
 			{
 				"indexed": false,
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "bytes4",
+				"name": "",
+				"type": "bytes4"
+			},
+			{
+				"indexed": false,
 				"internalType": "bytes",
-				"name": "data",
+				"name": "",
 				"type": "bytes"
 			}
 		],
@@ -30,9 +42,9 @@
 				"type": "string"
 			},
 			{
-				"internalType": "bytes32",
+				"internalType": "bytes",
 				"name": "_data",
-				"type": "bytes32"
+				"type": "bytes"
 			}
 		],
 		"name": "newTx",
