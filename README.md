@@ -1,6 +1,6 @@
 # CFX <=> ETH Chainlink Bridge
 
-Simple project send transactions to/from Conflux Network to/from Ethereum - deployed on the Conflux testnet and the Ropsten testnet.
+Simple project send transactions to/from Conflux Network to/from Ethereum - deployed on the Conflux Oceanus mainnet and the Ropsten testnet.
 
 **Components**
 
@@ -75,7 +75,7 @@ EI_CI_SECRET=<INSERT KEY>
 Initial startup:
 
 ```bash
-./external-initiator "{\"name\":\"cfx-testnet\",\"type\":\"conflux\",\"url\":\"http://testnet-jsonrpc.conflux-chain.org:12537\"}" --chainlinkurl "http://localhost:6688/"
+./external-initiator "{\"name\":\"cfx-mainnet\",\"type\":\"conflux\",\"url\":\"http://mainnet-jsonrpc.conflux-chain.org:12537\"}" --chainlinkurl "http://localhost:6688/"
 ```
 
 Normal startup command:

@@ -9,7 +9,7 @@ async function main() {
   // const defaultGasPrice = util.unit("GDrip", "Drip")(10)
 
   const cfx = new Conflux({
-    url: "http://testnet-jsonrpc.conflux-chain.org:12537",
+    url: "http://mainnet-jsonrpc.conflux-chain.org:12537",
     logger: console,
   });
 
@@ -21,7 +21,7 @@ async function main() {
   // create contract instance
   const contract = cfx.Contract({
     abi: require("../bridgeContract/abi.json"), //can be copied from remix
-    address: "0x8c48bb7e715df67aa04fbbc15aaf92077fecd12d",
+    address: "0x812c1df5c8e69ffba7568c1100accfc982a081df",
   });
 
   // deploy the contract, and get `contractCreated`
