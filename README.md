@@ -2,6 +2,8 @@
 
 Simple project send transactions to/from Conflux Network to/from Ethereum - deployed on the Conflux Oceanus mainnet and the Ropsten testnet.
 
+At a conceptual level, oracles connect blockchains to off-chain information, and bridges connect one blockchain to another. The other blockchain is considered "off-chain" to the original blockchain, hence a direct parallel to oracles.
+
 **Components**
 
 - Chainlink Node
@@ -87,15 +89,21 @@ Normal startup command:
 ### Setting up the external adapter
 
 Login to the [Chainlink node](https://localhost:6688) and add two bridges:
-| -- | -- |
-| cfxTx | http://172.17.0.1:3000/cfx |
+
+| Adapter     | URL                        |
+| ----------- | -------------------------- |
+| cfxTx       | http://172.17.0.1:3000/cfx |
 | ethTxCustom | http://172.17.0.1:3000/eth |
 
 The external adapter can be started with `yarn start-adapter`.
 
-### Starting the job specs
+### Job Specs
 
-## Notes
+CFX Transaction => External Initiator => Chainlink Node => External Adapter => ETH Transaction  
+See: [CFX job spec](./jobSpecs/cfx.json)
 
-- need to send ETH to node address
-- CL node only sends 32 bytes of data in a ethtx transaction
+ETH Transaction => Chainlink Node => External Adapter => CFX Transaction  
+See: [ETH job spec](./jobSpecs/eth.json)
+
+### Notes
+- CL node only sends 32 bytes of data in `ethtx` adapter, so `customEthTx` is used for sending longer data

@@ -14,9 +14,9 @@ const main = async () => {
   );
 
   const tx = await contract.newTx(
-    "0x57F5dede4116DFd861f4736039bB914e84ac9651",
-    "test(bytes32)",
-    "0x00"
+    "0x861dc585b3d7b156da39d8d7b7a70c1fbcedfd04",
+    "setState(uint256)",
+    "0x0000000000000000000000000000000000000000000000000000000000000080"
   );
 
   console.log(tx);

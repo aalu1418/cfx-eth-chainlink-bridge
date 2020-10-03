@@ -16,6 +16,7 @@
     "deploy-cfx": "node ./bridgeContract/deployCFX.js",
     "start-adapter": "node ./external-adapter.js",
     "eth-tx": "node ./contractInteractions/eth.js",
-    "cfx-tx": "node ./contractInteractions/cfx.js"
+    "cfx-tx": "node ./contractInteractions/cfx.js",
+    "check-states": "node ./contractInteractions/checkState.js"
   }
 }

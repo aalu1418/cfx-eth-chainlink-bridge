@@ -24,11 +24,13 @@ async function main() {
     address: "0x812c1df5c8e69ffba7568c1100accfc982a081df",
   });
 
-  // deploy the contract, and get `contractCreated`
   const tx = contract.newTx(
-    "0x57F5dede4116DFd861f4736039bB914e84ac9651",
-    "test(bytes32)",
-    Buffer.from("test")
+    "0x296e0cacd23d37ceb5f2bea806bcf37e4b055ec6",
+    "setState(uint256)",
+    Buffer.from(
+      "0000000000000000000000000000000000000000000000000000000000000040",
+      "hex"
+    )
   );
   const receipt = await account.sendTransaction(tx).executed();
   console.log(receipt);
